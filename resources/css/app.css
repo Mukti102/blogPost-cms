@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.input-shadow{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px 0px inset;
+}
+.input-shadow:focus{
+    border: none;
+}
+.submit-shadow{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+@layer components {
+    .text-gradient{
+        @apply bg-gradient-to-tr from-emerald-600 to-blue-600 text-transparent bg-clip-text
+    }
+    .active-dash{
+        @apply bg-gradient-to-tr from-blue-600 to-blue-400 shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 shadow-md 
+    }
+    .active{
+        @apply md:text-blue-700 md:p-0 md:dark:text-blue-500
+    }
+}
+
+
+.hidden-scrollbar {
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Optional: You can also set overflow-x to hidden if you want to disable horizontal scrolling */
+.hidden-scrollbar {
+    overflow-x: hidden;
+}
+
+.font-roboto{
+    font-family: "Roboto",sans-serif;
+}
+
+.text:hover ~ .cursor{
+    transform: scale(8);
+}
+
+/* 
+::marker{
+    color: transparent;
+} */
+
